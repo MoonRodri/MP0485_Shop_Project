@@ -173,7 +173,7 @@ public class Shop {
         System.out.println("Realizar venta, escribir nombre cliente");
         String client = sc.nextLine();
 
-        // sale product until input name is not 0
+        // sale product until input name is not 00
         double totalAmount = 0.0;
         String name = "";
         while (!name.equals("0")) {
