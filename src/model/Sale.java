@@ -1,46 +1,45 @@
 package model;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Sale {
-	String client;
-	Product[] products;
-	double amount;
 
-	public Sale(String client, Product[] products, double amount) {
-		super();
-		this.client = client;
-		this.products = products;
-		this.amount = amount;
-	}
+    private Client client;
+    private List<Product> products;
+    private double amount;
 
-	public String getClient() {
-		return client;
-	}
+    public Sale(Client client, List<Product> products, double amount) {
+        this.client = client;
+        this.products = products;
+        this.amount = amount;
+    }
 
-	public void setClient(String client) {
-		this.client = client;
-	}
+    public Client getClient() {
+        return client;
+    }
 
-	public Product[] getProducts() {
-		return products;
-	}
+    public void setClient(Client client) {
+        this.client = client;
+    }
 
-	public void setProducts(Product[] products) {
-		this.products = products;
-	}
+    public List<Product> getProducts() {
+        return products;
+    }
 
-	public double getAmount() {
-		return amount;
-	}
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
 
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
+    public double getAmount() {
+        return amount;
+    }
 
-	@Override
-	public String toString() {
-		return "Sale [client=" + client + ", products=" + Arrays.toString(products) + ", amount=" + amount + "]";
-	}
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
 
+    @Override
+    public String toString() {
+        return "VENTA: Cliente: " + client + ", Productos: " + products + ", Cantidad total: " + amount;
+    }
 }
